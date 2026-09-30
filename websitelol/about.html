@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Cookie 'Ko | About us </title>
+        <style>
+            body{
+                margin: 0;
+                padding: 0;
+                background-color: rgb(252, 239, 225);
+            }
+            *{
+                box-sizing: border-box;
+            }
+            h5{
+                position: relative;
+                margin-top: 0;
+                text-align: center;
+                font-family: cursive;
+                background-color: black;
+                color: white;
+                padding: 13px;
+                width: 100vw;
+            }
+            nav{
+                background-color:rgb(68, 35, 14);
+                padding:10px;
+                text-align:center;
+                position:relative;
+                width: 100vw;
+                height: 2.5vw;
+            }
+            .navbtns{
+                color: black;
+                text-align: center;
+                 padding: 5px 16px;
+                 text-decoration: none;
+                 background-color: white;
+                 border-radius: 5px;
+                 font-size: 16px;
+                 margin: 10px;
+                 font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            }
+            .logo {
+                position: absolute;
+                height: 14vw;
+                top: -6.167vw;
+                left: 170px;
+                z-index: 2;
+                animation-name: logoback;
+                animation-duration: 500ms;
+                animation-delay: 0s;
+            }
+            @keyframes logomation {
+                0% { transform: rotate(0deg); }
+                100% { transform: rotate(360deg); }
+            }
+            @keyframes logoback {
+                0% { transform: rotate(360deg); }
+                100% { transform: rotate(0deg); }
+            }
+            .logo:hover {
+                animation-name: logomation;
+                animation-duration: 500ms;
+                animation-delay: 0s;
+            }
+            a:link, a:visited, a:hover, a:active {
+                text-decoration: none;
+            }
+
+            /*  edit nyo ung footer, dapat nasa pinaka baba ng page */
+
+            footer{
+                background-color: rgb(68, 35, 14);
+                color: white;
+                text-align: center;
+                padding: 8px;
+                font-family: serif;
+                bottom: 0px;
+                margin-top:250px;
+            }
+            .infobox{
+                background-color:rgba(149, 101, 54);
+                border: none;
+                position: relative;
+                opacity: 90%;
+                z-index: 1;
+                border-radius: 20px;
+                display: flex;
+                }
+            .flexboks{
+                margin-top: 15px;
+                width: 100vw;
+                height: 50vw;
+                display: flexbox;
+            }
+            .infomages{
+                position: relative;
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+                opacity: 20%;
+                border-radius: 20px;
+            }
+            .boxinabox{
+                color: white;
+                text-align:center;
+                border: white solid 1px;
+                border-radius: 10px;
+                margin: 1.5%;
+                height: 90%;
+                width: 97%;
+                margin-top: 1.7%;
+                position: absolute;
+                z-index: 1;
+            }
+            .order{
+                background-color: rgb(231, 160, 89);
+                color: white;
+                text-decoration: none;
+                padding: 15px;
+                padding-right: 50px;
+                padding-left: 50px;
+                margin: 10px;
+                opacity: 120%;
+                margin-bottom: 10px;
+                position: relative;
+                border-radius: 100px;
+            }
+            .order:hover{
+                background-color: rgb(41, 26, 11);
+            }
+        </style>
+    </head>
+    <body>
+
+        <h5>Order Your Cookies Now!</h5>
+        <nav>
+            <a href="home.html">
+        <img src="images/cookie.png"alt="cookie"title="home"float="2" class="logo">
+        </a>
+            <a href="order.html" class="navbtns">OUR COOKIES</a>
+            <a href="about.html" class="navbtns">ABOUT US</a>
+            <a href="website1.html" class="navbtns">LOG OUT</a>
+        </nav>
+
+
+
+
+        <div class="flexboks">
+            <div class="infobox" style="height: 70%; width: 46%; margin: 2%; float: left;"> <img src="images/infopic1.jpg" class="infomages"> 
+                <div class="boxinabox" style="height: 96%;">
+                    <p style="font-size: 60px; margin-top: 5px;"><b> About Cookie 'Ko </b></p>
+                    <h1 style="margin-top: 0px;">Your Favorite Cookies, Made with Love. 😘</h1> <br>
+                    <p> Welcome to <b>Cookie 'ko</b> — where every cookie is baked to satisfy your cravings. </p> <br>
+                    <p> We Started Cookie 'ko with one simple goal: <b>make really good cookies and have fun doing it</b>.<br> Whether you're looking for a quick sweet treat, something to share with your friends, <br>or just an excuse to order another box, we've got you covered! </p> <br>
+                    <p>At the end of the daym we're here for one thing:</p>
+                    <h4><i>Making cookies that you cannot resist</i></h5>
+                </div>
+            </div>
+
+            <div class="infobox" style="height: 33.1%; width: 46%; margin: 2%; margin-left: 0; float: right;"> <img src="images/infopic2.jpg" class="infomages"> 
+                <div class="boxinabox">
+                    <h1>Our Mission</h1>
+                    <p style="margin-top: 32px;">To make delicious, satisfying cookies that turn ordinary moments into something a little sweeter.</p>
+                    <p>We want Cookie 'Ko to be the cookie you think of whenever you think</p>
+                    <h4> Damn, I want a cookie </h4>
+                </div>
+            </div>
+            <div class="infobox" style="height: 33.1%; width: 46%; margin: 2%; float: right; margin-top: 0;"> <img src="images/infopic3.jpg" class="infomages"> 
+                <div class="boxinabox">
+                    <h1>Our Vision</h1>
+                    <p style="margin-top: 40px; margin-bottom: 30px;">To become a fun, recognizable cookie brand that people love for both our products and out "personality".</p>
+                    <p>We're here to bake good cookies, make a few people smile, and maybe leave a few questionable jokes along the way.</p>
+                </div>
+            
+            </div>
+            <div class="infobox" style="height: 33.1%; width: 46%; margin: 2%; float: left; margin-top: 0;"> <img src="images/infopic4.jpg" class="infomages"> 
+                <div class="boxinabox">
+                    <h1>Got a Craving?</h1>
+                    <p>Don't keep it to yourself</p>
+                    <h2>Have Cookie 'Ko today. 🍪</h2> <br>
+                    <a href="order.html" class="order">  Order Now!  </a>
+                </div>
+            </div>
+            <div class="infobox" style="height: 33.1%; width: 46%; margin: 2%; float: right; margin-top: 0;"> <img src="images/infopic5.jpg" class="infomages"> 
+                <div class="boxinabox">
+                    <h1>Our Promise</h1>
+                    <p>We're committed to giving you cookies that are:</p>
+                    <h4>Fresh, Delicious, and Satisfying.</h4>
+                    <p>And if you end up saying <i>"I want another round"</i>...</p>
+                    <p><b>We'll take that as a compliment.</b></p>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <footer>
+            <h2 style="color:#fff; font-size: 28px; margin: 0; letter-spacing: 2px;">COOKIE 'KO</h2>
+
+            <p style="margin: 10px 0 30px; font-style: italic; color:#c9a86a"> Tikman Mo Na Ang Cookies Ko</p>
+
+            <p style="font-size: 14px;">
+                <a href="#" style="color:#888;text-decoration:none; margin: 0 10px;"> Facebook </a>
+                <a href="#" style="color:#888;text-decoration:none; margin: 0 10px;"> Instagram </a>
+                <a style="color:#888;text-decoration:none; margin: 0 10px;"> 0987654321 </a>
+                <a style="color:#888;text-decoration:none; margin: 0 10px;"> cookie_ko@gmail.com </a>
+            </p>
+
+            <p style="font-size: 12px; margin-top: 30px; color:#a9a9a9;"> © 2026 Cookie 'Ko — Always Warm, Always Ready. </p>
+
+        </footer>
+
+        
+    </body>
+</html>
