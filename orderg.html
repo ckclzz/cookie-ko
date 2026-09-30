@@ -1,0 +1,904 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Cookie 'Ko | Order Page </title>
+        <style>
+            body{
+                margin: 0;
+                padding: 0;
+                background-color: rgb(252, 239, 225);
+                min-height: 100vh;
+                display: flex;
+                flex-direction: column;
+            }
+            *{
+                box-sizing: border-box;
+            }
+            a:link, a:visited, a:hover, a:active {
+                text-decoration: none;
+            }
+            h5{
+                position: relative;
+                margin-top: 0;
+                text-align: center;
+                font-family: cursive;
+                background-color: black;
+                color: white;
+                padding: 13px;
+                width: 100vw;
+            }
+            nav{
+                background-color:rgb(68, 35, 14);
+                padding:10px;
+                text-align:center;
+                position:relative;
+                width: 100vw;
+                height: 2.5vw;
+            }
+            .navbtns{
+                color: black;
+                text-align: center;
+                 padding: 5px 16px;
+                 text-decoration: none;
+                 background-color: white;
+                 border-radius: 5px;
+                 font-size: 16px;
+                 margin: 10px;
+                 font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            }
+            .logo {
+                position: absolute;
+                height: 14vw;
+                top: -6.167vw;
+                left: 170px;
+                z-index: 2;
+                animation-name: logoback;
+                animation-duration: 500ms;
+                animation-delay: 0s;
+                }
+            @keyframes logomation {
+                0% { transform: rotate(0deg); }
+                100% { transform: rotate(360deg); }
+            }
+            @keyframes logoback {
+                0% { transform: rotate(360deg); }
+                100% { transform: rotate(0deg); }
+            }
+            .logo:hover {
+                animation-name: logomation;
+                animation-duration: 500ms;
+                animation-delay: 0s;
+            }
+            a:link, a:visited, a:hover, a:active {
+                text-decoration: none;
+            }
+            .flexboks{
+                margin-top: 15px;
+                width: 100vw;
+                height: 60vw;
+                display: flex;
+            }
+
+            footer{
+                background-color: rgb(68, 35, 14);
+                color: white;
+                text-align: center;
+                padding: 8px;
+                font-family: serif;
+                margin-top: auto;
+            }
+
+            .cookiebox{
+                width: 60%;
+                height: 99%;
+                background-color: #f3e2c3;
+                margin: auto;
+                border-radius: 20px;
+                margin-left: 0.5%;
+                margin-right: 1%;
+                overflow-y: scroll;
+                border: rgb(252, 239, 225) 1px solid;
+            }
+            .placething{
+               width: 100%; height: 27%; display: flex; margin-bottom: 20px;
+            }
+            .cookieitems{
+                position: relative;
+                width: 30%;
+                height: 100%;
+                margin: 2.5%;
+                background-color: white;
+                border-radius: 20px;
+                background-size: cover;
+                background-position: center;
+            }
+            .cookieitems:hover{
+                background-color: #c9a86a;
+            }
+            .category{
+                width: 15%;
+                height: 99%;
+                background-color: #f3e2c3;
+                border-radius: 20px;
+                float: left;
+                margin-left: 1%;
+                margin-right: 1%;
+            }
+            .catcookies{
+                position: relative;
+                width: 90%;
+                height: 15%;
+                margin: 5%;
+                background-color: white;
+                border-radius: 40px;
+            }
+            .catcookies:hover{
+                background-color:#c9a86a;
+            }
+            .cookieimages{
+                height: 100%;
+                width: 100%;
+                border-radius: 20px;
+                position: relative;
+                object-fit: cover;
+            }
+            .bottext{
+                height: 15%;
+                width: 70%;
+                background-color: white;
+                color: #3b2418;
+                position: absolute;
+                bottom: 4px;
+                border-radius: 60px;
+                left: 50%;
+                transform: translateX(-50%);
+                text-align: center;
+                padding: 8px;
+                font-size: 18px;
+            }
+
+
+
+
+            /* ordering form thing */
+
+
+
+        .order-container {
+            height: 99%;
+            width: 20%;
+            float: right;
+            margin-right: 2%;
+            background-color: #f3e2c3;
+            padding: 15px;
+            border-radius: 20px;
+            position: relative;
+            
+        }
+
+        .formh1 {
+            text-align: center;
+            margin-bottom: 30px;
+            margin-top: 30px;
+        }
+
+        .formh2 {
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+
+
+        /* =========================
+           COOKIE ROWS
+        ========================= */
+
+        .cookie-rows {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .cookie-row {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+
+        /* COOKIE DROPDOWN */
+
+        .cookie-select {
+            flex: 1;
+            padding: 12px;
+            font-size: 10px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            background-color: white;
+            color: #3b2418;
+        }
+
+
+        /* =========================
+           QUANTITY
+        ========================= */
+
+        .quantity {
+            display: flex;
+            align-items: center;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .quantity button {
+            width: 10px;
+            height: 36px;
+            border: none;
+            background-color: #f1e4d7;
+            color: #3b2418;
+            font-size: 10px;
+            cursor: pointer;
+        }
+
+        .quantity button:hover {
+            background-color: #e5d3c1;
+        }
+
+        .quantity-number {
+            width: 10px;
+            text-align: center;
+            font-size: 10px;
+            font-weight: bold;
+        }
+
+
+        /* =========================
+           REMOVE BUTTON
+        ========================= */
+
+        .remove-button {
+            width: 35px;
+            height: 35px;
+            border: none;
+            border-radius: 50%;
+            background-color: #eee;
+            color: #777;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .remove-button:hover {
+            background-color: #ddd;
+        }
+
+
+        /* =========================
+           ADD COOKIE BUTTON
+        ========================= */
+
+        .add-cookie {
+            margin-top: 15px;
+            padding: 12px 18px;
+            border: 2px dashed #b68b6b;
+            border-radius: 10px;
+            background-color: transparent;
+            color: #8a5a3b;
+            font-size: 15px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        .add-cookie:hover {
+            background-color: #faf3ed;
+        }
+
+
+        /* =========================
+           TOTAL
+        ========================= */
+
+        .total-section {
+            margin-top: 25px;
+            padding-top: 20px;
+            border-top: 2px solid #eee;
+            display: flex;
+            justify-content: space-between;
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+
+        /* =========================
+           CUSTOMER INFORMATION
+        ========================= */
+
+        .customer-section {
+            margin-top: 40px;
+        }
+
+        .form-group {
+            margin-bottom: 18px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 7px;
+            font-weight: bold;
+        }
+
+        input,
+        textarea,
+        .payment-select {
+            width: 100%;
+            padding: 13px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            font-size: 16px;
+            font-family: inherit;
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 90px;
+        }
+
+
+        /* =========================
+           PLACE ORDER
+        ========================= */
+
+        .place-order {
+            width: 100%;
+            margin-top: 15px;
+            padding: 16px;
+            border: none;
+            border-radius: 12px;
+            background-color: #7b4b2a;
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .place-order:hover {
+            background-color: #633b21;
+        }
+
+
+
+
+        </style>
+    </head>
+    <body>
+
+        <h5>Order Your Cookies Now!</h5>
+        <nav>
+            <a href="home.html">
+        <img src="images/cookie.png"alt="cookie"title="home"float="2" class="logo">
+        </a>
+            <a href="order.html" class="navbtns">OUR COOKIES</a>
+            <a href="about.html" class="navbtns">ABOUT US</a>
+                <a href="website1.html" class="navbtns">LOG OUT</a>
+        </nav>
+
+
+
+        <div class="flexboks">
+            <div class="category">
+                <a href="order.html">
+                <div class="catcookies"> <br><p style="text-align: center; position: relative; color: black; font-size: x-large;">All Cookies</p> </div>
+                </a>
+
+                <a href="ordersnch.html">
+                <div class="catcookies">  <br><p style="text-align: center; position: relative; color: black; font-size: x-large;">Soft & Chewy</p> </div>
+                </a>
+
+                <a href="orderg.html">
+                <div class="catcookies" style="background-color: #c9a86a;">  <br><p style="text-align: center; position: relative; color: black; font-size: x-large;">Gooey</p> </div>
+                </a>
+
+                <a href="ordercr.html">
+                <div class="catcookies">  <br><p style="text-align: center; position: relative; color: black; font-size: x-large;">Crunchy</p> </div>
+                </a>
+
+                <a href="orderst.html">
+                <div class="catcookies">  <br><p style="text-align: center; position: relative; color: black; font-size: x-large;">Stuffed</p> </div>
+                </a>
+
+                <a href="orderf.html">
+                <div class="catcookies"> <br><p style="text-align: center; position: relative; color: black; font-size: x-large;">Fudgy</p> </div>
+                </a>
+            </div>
+
+            <div class="cookiebox">
+                <div class="placething">
+                <div class="cookieitems" style="background-image: url('images/Gooey/Choco\ Gooey.jpg');"> <div class="bottext"> Choco Gooey </div> </div>
+                <div class="cookieitems" style="background-image: url('images/Gooey/Girlie\ Gooey.jpg');"> <div class="bottext"> Strawberry Gooey </div></div>
+                <div class="cookieitems" style="background-image: url('images/Gooey/Gooey\ Crinkle.jpg');"> <div class="bottext"> Crinkle Gooey </div> </div>
+                </div>
+            </div>
+
+
+            <div class="order-container">
+
+        <h1 class="formh1">🍪 ORDER</h1>
+
+
+        <!-- =========================
+             COOKIE ORDER
+        ========================== -->
+
+        <form id="orderForm">
+          <div style="overflow-y: scroll; height: 100px;">
+
+            <div id="cookieRows" class="cookie-rows">
+
+                <!-- FIRST COOKIE ROW -->
+
+                <div class="cookie-row">
+                  
+
+                    <select class="cookie-select" onchange="calculateTotal()">
+
+                        <option value="50">
+                            Classic Soft — ₱50
+
+                        <option value="50">
+                            Choco Soft — ₱50
+
+                        <option value="50">
+                            Classic Soft V2 — ₱50
+
+
+
+                        <option value="50">
+                            Choco Gooey — ₱60
+
+                        <option value="50">
+                            Strawberry Gooey — ₱60
+
+                        <option value="50">
+                            Crinkle Gooey — ₱40
+
+
+
+                        <option value="50">
+                            Crystal Cookie — ₱40
+
+                        <option value="50">
+                            Double Delight — ₱40
+
+                        <option value="50">
+                            Whole Grain Cookie — ₱30
+
+
+
+                        <option value="50">
+                            Coconut Cookie — ₱30
+
+                        <option value="50">
+                            Cookie Sandwich — ₱60
+
+                        <option value="50">
+                            Whoopie Cookie — ₱40
+
+
+
+                        <option value="50">
+                            Buckey — ₱80
+
+                        <option value="50">
+                            Macaron — ₱60
+
+                        <option value="50">
+                            Macaron Cake — ₱70
+
+                    </select>
+
+
+                    <div class="quantity" style="margin-right: 50px;">
+
+                        <button
+                            type="button"
+                            onclick="changeQuantity(this, -1)">
+                            -
+                        </button>
+
+                        <span class="quantity-number">
+                            1
+                        </span>
+
+                        <button
+                            type="button"
+                            onclick="changeQuantity(this, 1)">
+                            +
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- ADD ANOTHER COOKIE TYPE -->
+
+            <button
+                type="button"
+                class="add-cookie"
+                onclick="addCookieRow()">
+
+                + Add Another Cookie Type
+
+            </button>
+</div>
+
+            <!-- =========================
+                 TOTAL
+            ========================== -->
+
+            <div class="total-section">
+
+                <span>Total:</span>
+
+                <span>
+                    ₱<span id="total">50</span>
+                </span>
+
+            </div>
+
+            <!-- =========================
+                 CUSTOMER INFORMATION
+            ========================== -->
+
+            <div class="customer-section">
+
+                <h2 class="formh2">Customer Information</h2>
+
+
+                <div class="form-group">
+
+                    <label for="name">
+                        Name:
+                    </label>
+
+                    <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        required>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="phone">
+                        Phone:
+                    </label>
+
+                    <input
+                        type="tel"
+                        id="phone"
+                        name="phone"
+                        required>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="address">
+                        Address:
+                    </label>
+
+                    <textarea
+                        id="address"
+                        name="address"
+                        required></textarea>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="payment">
+                        Payment:
+                    </label>
+
+                    <select
+                        id="payment"
+                        name="payment"
+                        class="payment-select"
+                        required>
+
+                        <option value="">
+                            Choose payment method
+                        </option>
+
+                        <option value="GCash">
+                            GCash
+                        </option>
+
+                        <option value="Cash">
+                            Cash
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- =========================
+                     SUBMIT
+                ========================== -->
+
+                <button
+                    type="submit"
+                    class="place-order">
+
+                    PLACE ORDER
+
+                </button>
+
+            </div>
+
+        </form>
+
+    </div>
+
+
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================== -->
+
+    <script>
+
+        /*
+         * CHANGE QUANTITY
+         */
+
+        function changeQuantity(button, amount) {
+
+            const quantityBox = button.parentElement;
+
+            const numberDisplay =
+                quantityBox.querySelector(".quantity-number");
+
+            let quantity =
+                parseInt(numberDisplay.textContent);
+
+            quantity += amount;
+
+
+            // Don't allow 0 or negative
+
+            if (quantity < 1) {
+                quantity = 1;
+            }
+
+
+            numberDisplay.textContent = quantity;
+
+            calculateTotal();
+        }
+
+
+
+        /*
+         * ADD ANOTHER COOKIE TYPE
+         */
+
+        function addCookieRow() {
+
+            const cookieRows =
+                document.getElementById("cookieRows");
+
+
+            const newRow =
+                document.createElement("div");
+
+            newRow.classList.add("cookie-row");
+
+
+            newRow.innerHTML = `
+
+                <select class="cookie-select" onchange="calculateTotal()">
+
+                        <option value="50">
+                            Classic Soft — ₱50
+
+                        <option value="50">
+                            Choco Soft — ₱50
+
+                        <option value="50">
+                            Classic Soft V2 — ₱50
+
+
+
+                        <option value="50">
+                            Choco Gooey — ₱60
+
+                        <option value="50">
+                            Strawberry Gooey — ₱60
+
+                        <option value="50">
+                            Crinkle Gooey — ₱40
+
+
+
+                        <option value="50">
+                            Crystal Cookie — ₱40
+
+                        <option value="50">
+                            Double Delight — ₱40
+
+                        <option value="50">
+                            Whole Grain Cookie — ₱30
+
+
+
+                        <option value="50">
+                            Coconut Cookie — ₱30
+
+                        <option value="50">
+                            Cookie Sandwich — ₱60
+
+                        <option value="50">
+                            Whoopie Cookie — ₱40
+
+
+
+                        <option value="50">
+                            Buckey — ₱80
+
+                        <option value="50">
+                            Macaron — ₱60
+
+                        <option value="50">
+                            Macaron Cake — ₱70
+
+                    </select>
+
+
+                <div class="quantity">
+
+                    <button
+                        type="button"
+                        onclick="changeQuantity(this, -1)">
+
+                        −
+
+                    </button>
+
+
+                    <span class="quantity-number">
+
+                        1
+
+                    </span>
+
+
+                    <button
+                        type="button"
+                        onclick="changeQuantity(this, 1)">
+
+                        +
+
+                    </button>
+
+                </div>
+
+
+                <button
+                    type="button"
+                    class="remove-button"
+                    onclick="removeCookieRow(this)">
+
+                    ×
+
+                </button>
+
+            `;
+
+
+            cookieRows.appendChild(newRow);
+
+            calculateTotal();
+        }
+
+
+
+        /*
+         * REMOVE COOKIE TYPE
+         */
+
+        function removeCookieRow(button) {
+
+            button.parentElement.remove();
+
+            calculateTotal();
+        }
+
+
+
+        /*
+         * CALCULATE TOTAL
+         */
+
+        function calculateTotal() {
+
+            let total = 0;
+
+
+            const rows =
+                document.querySelectorAll(".cookie-row");
+
+
+            rows.forEach(row => {
+
+                const cookie =
+                    row.querySelector(".cookie-select");
+
+                const quantity =
+                    row.querySelector(".quantity-number");
+
+
+                const price =
+                    Number(cookie.value);
+
+                const amount =
+                    Number(quantity.textContent);
+
+
+                total += price * amount;
+
+            });
+
+
+            document.getElementById("total").textContent =
+                total;
+        }
+
+
+
+        /*
+         * FORM SUBMISSION
+         */
+
+        document
+            .getElementById("orderForm")
+            .addEventListener("submit", function(event) {
+
+                event.preventDefault();
+
+                alert("Order placed!");
+
+            });
+
+    </script>
+        </div>
+    
+
+            <footer>
+            <h2 style="color:#fff; font-size: 28px; margin: 0; letter-spacing: 2px;">COOKIE 'KO</h2>
+
+            <p style="margin: 10px 0 30px; font-style: italic; color:#c9a86a"> Tikman Mo Na Ang Cookies Ko</p>
+
+            <p style="font-size: 14px;">
+                <a href="#" style="color:#888;text-decoration:none; margin: 0 10px;"> Facebook </a>
+                <a href="#" style="color:#888;text-decoration:none; margin: 0 10px;"> Instagram </a>
+                <a style="color:#888;text-decoration:none; margin: 0 10px;"> 0987654321 </a>
+                <a style="color:#888;text-decoration:none; margin: 0 10px;"> cookie_ko@gmail.com </a>
+            </p>
+
+            <p style="font-size: 12px; margin-top: 30px; color:#a9a9a9;"> © 2026 Cookie 'Ko — Always Warm, Always Ready. </p>
+
+        </footer>
+
+        
+    </body>
+</html>    

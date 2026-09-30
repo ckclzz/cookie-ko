@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Cookie 'Ko | Home </title>
+        <style>
+            body{
+                margin: 0;
+                padding: 0;
+                background-color: rgb(252, 239, 225);
+            }
+            *{
+                box-sizing: border-box;
+            }
+            .cookiepix{
+                position:relative;
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
+            .navbtns{
+                color: black;
+                text-align: center;
+                 padding: 5px 16px;
+                 text-decoration: none;
+                 background-color: white;
+                 border-radius: 5px;
+                 font-size: 16px;
+                 margin: 10px;
+                 font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            }
+            .logo {
+                position: absolute;
+                height: 14vw;
+                top: -6.167vw;
+                left: 170px;
+                z-index: 2;
+                animation-name: logoback;
+                animation-duration: 500ms;
+                animation-delay: 0s;
+                }
+            @keyframes logomation {
+                0% { transform: rotate(0deg); }
+                100% { transform: rotate(360deg); }
+            }
+            @keyframes logoback {
+                0% { transform: rotate(360deg); }
+                100% { transform: rotate(0deg); }
+            }
+            .logo:hover {
+                animation-name: logomation;
+                animation-duration: 500ms;
+                animation-delay: 0s;
+            }
+            .textbox{
+                background-color:rgba(149, 101, 54);
+                border: none;
+                padding:20px;
+                width: 60%; height: 100%;
+                float: right;
+                position: relative;
+                opacity: 90%;
+                z-index: 1;
+            }
+            .textinbox{
+                color: white;
+                text-align:center;
+                border: white solid 1px;
+                margin: 0.6%;
+                height: 103%;
+                width: 98%;
+            }
+            .order{
+                background-color: rgb(190, 130, 69);
+                color: white;
+                text-decoration: none;
+                padding: 8px;
+                margin: 10px;
+                margin-top: 55px;
+                opacity: 120%;
+                margin-bottom: 10px;
+                position: relative;
+                border-radius: 100px;
+            }
+            .order:hover{
+                background-color: rgb(41, 26, 11);
+            }
+            a:link, a:visited, a:hover, a:active {
+                text-decoration: none;
+            }
+            .boxes{
+                background-color:rgb(235, 233, 233);
+                border: none;
+                padding:20px;
+                width:36.5%;
+                float: center;
+                height: 100%;
+                position: relative;
+                top: 60px;
+                opacity: 100%;
+                left: 10%;
+                z-index: 1;
+                background-image: url(images/boxpic1.jpg);
+                background-size: cover;
+            }
+            .boxestext{
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width:100%;
+                height: 30%;
+                background: white;
+                box-sizing: border-box;
+                padding: 16px 24px;
+                text-align: center;
+            }
+            .boxeses{
+                display: flex;
+                gap: 8%;
+                width: 100vw;
+                height: 30vw;
+            }
+            h5{
+                position: relative;
+                margin-top: 0;
+                text-align: center;
+                font-family: cursive;
+                background-color: black;
+                color: white;
+                padding: 13px;
+                width: 100vw;
+            }
+            nav{
+                background-color:rgb(68, 35, 14);
+                padding:10px;
+                text-align:center;
+                position:relative;
+                width: 100vw;
+                height: 2.5vw;
+            }
+            .flexboks{
+                background-color: black;
+                width: 100vw;
+                height: 560px;
+                display: flexbox;
+            }
+            .herothing{
+                width: 40%; height: 100%;
+            }
+            .herotexts{
+                display: flex;
+                color: white;
+                text-align: center;
+                align-items: center;
+
+            }
+            footer{
+                background-color: rgb(68, 35, 14);
+                color: white;
+                text-align: center;
+                padding: 8px;
+                font-family: serif;
+                bottom: 0px;
+                margin-top:90px;
+            }
+        </style>
+    </head>
+    <body>
+
+        <h5>Order Your Cookies Now!</h5>
+        <nav>
+            <a href="home.html">
+        <img src="images/cookie.png"alt="cookie"title="home"float="2" class="logo">
+        </a>
+            <a href="order.html" class="navbtns">OUR COOKIES</a>
+            <a href="about.html" class="navbtns">ABOUT US</a>
+            <a href="website1.html" class="navbtns">LOG OUT</a>
+        </nav>
+
+
+
+        <div class="flexboks">
+            <div class="herothing" style="float: left;">
+        <img src="images/img1.jpg"alt="cookie"title="cookie" class="cookiepix">
+            </div>
+                <div class="textbox">
+                    <div class="textinbox">
+                        <p style="font-size: 120px; margin-top: 10px;"><b>Cookie 'Ko</b></p>
+                        <h1 style="margin-top: -60px;"> My Cookie, Your New Obsession</h1>
+                        <p style="margin-top: 45px;">At Cookie 'Ko, we bake it soft, warm, and extra special. </p>
+                        <p>Premium ingredients, baked fresh daily.</p>
+                        <p style="font-size: large;"><b>Syempre, mas masarap pag akin.</b></p>
+                        <a href="order.html">
+                        <div class="order"> <h4> <b>ORDER NOW</b> </h4> </div>
+                        </a>
+                    </div>
+                </div> 
+            </div>
+
+
+
+
+        <div class="boxeses">
+        <div class="boxes">
+            <div class="boxestext"> <p>Baked Fresh and Ready Whenever You Need it.</p> <p> Just Say the Word, and Our Cookies will be there </p> <p>Hot and Waiting.</p> </div>
+        </div>
+        <div class="boxes" style="background-image: url(images/boxpic2.jpg);">
+            <div class="boxestext"> <p>Premium Ingredients </p><p>Premium Quality</p><p> Unforgettable Cookie</p>
+        </div>
+        </div>
+</div>
+        <footer>
+            <h2 style="color:#fff; font-size: 28px; margin: 0; letter-spacing: 2px;">COOKIE 'KO</h2>
+
+            <p style="margin: 10px 0 30px; font-style: italic; color:#c9a86a"> Tikman Mo Na Ang Cookies Ko</p>
+
+            <p style="font-size: 14px;">
+                <a href="#" style="color:#888;text-decoration:none; margin: 0 10px;"> Facebook </a>
+                <a href="#" style="color:#888;text-decoration:none; margin: 0 10px;"> Instagram </a>
+                <a style="color:#888;text-decoration:none; margin: 0 10px;"> 0987654321 </a>
+                <a style="color:#888;text-decoration:none; margin: 0 10px;"> cookie_ko@gmail.com </a>
+            </p>
+
+            <p style="font-size: 12px; margin-top: 30px; color:#a9a9a9;"> © 2026 Cookie 'Ko — Always Warm, Always Ready. </p>
+
+        </footer>
+
+
+    </body>
+</html>
